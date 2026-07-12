@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ImmoMentor – Dein Weg zum Top-Makler</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a href="#/dashboard" class="brand">🏠 <span>ImmoMentor</span></a>
+  <nav class="mainnav" id="mainnav">
+    <a href="#/dashboard" data-route="dashboard">Dashboard</a>
+    <a href="#/themen" data-route="themen">Themen</a>
+    <a href="#/tagesmix" data-route="tagesmix">Tagesmix</a>
+    <a href="#/karten" data-route="karten">Karteikarten <span class="badge" id="due-badge" hidden>0</span></a>
+    <a href="#/statistik" data-route="statistik">Statistik</a>
+  </nav>
+  <div class="topbar-status">
+    <span class="streak" id="streak-display" title="Lern-Streak: Tage in Folge gelernt">🔥 0</span>
+    <span class="xp" id="xp-display" title="Erfahrungspunkte">⭐ 0 XP</span>
+  </div>
+</header>
+
+<main id="app" class="app-main"></main>
+
+<div id="toast-container" class="toast-container"></div>
+
+<!-- Kern -->
+<script src="js/core/util.js"></script>
+<script src="js/core/storage.js"></script>
+<script src="js/core/srs.js"></script>
+<script src="js/core/gamification.js"></script>
+<script src="js/data/registry.js"></script>
+
+<!-- Fachinhalte (hier neue Themen-Dateien einbinden) -->
+<script src="data/bewertung.js"></script>
+<script src="data/weg.js"></script>
+<script src="data/makler.js"></script>
+<script src="data/projekt.js"></script>
+<script src="data/finanzierung.js"></script>
+
+<!-- Lern-Engines -->
+<script src="js/engines/lesson.js"></script>
+<script src="js/engines/quiz.js"></script>
+<script src="js/engines/cloze.js"></script>
+<script src="js/engines/calc.js"></script>
+<script src="js/engines/flashcards.js"></script>
+<script src="js/engines/casestudy.js"></script>
+<script src="js/engines/session.js"></script>
+
+<!-- Views -->
+<script src="js/views/dashboard.js"></script>
+<script src="js/views/topics.js"></script>
+<script src="js/views/review.js"></script>
+<script src="js/views/stats.js"></script>
+
+<script src="js/app.js"></script>
+</body>
+</html>
