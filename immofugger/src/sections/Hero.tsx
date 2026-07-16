@@ -84,11 +84,15 @@ export function Hero() {
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.6, delay: i * 0.12 }}
           >
-            <Counter
-              value={stat.value}
-              suffix={stat.suffix}
-              className="font-mono text-4xl font-semibold text-gold-light"
-            />
+            {stat.value !== null ? (
+              <Counter
+                value={stat.value}
+                suffix={stat.suffix}
+                className="font-mono text-4xl font-semibold text-gold-light"
+              />
+            ) : (
+              <span className="font-mono text-4xl font-semibold text-gold-light">{stat.text}</span>
+            )}
             <p className="mt-2 text-sm uppercase tracking-widest text-slateink">{stat.label}</p>
           </motion.div>
         ))}

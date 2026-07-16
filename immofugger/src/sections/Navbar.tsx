@@ -5,12 +5,14 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Button } from '../components/Button'
 import { Logo } from '../components/Logo'
 import { nav } from '../content/de'
+import { useAuth } from '../lib/auth/AuthContext'
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
+  const { user } = useAuth()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -55,12 +57,20 @@ export function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button to="/login" variant="ghost">
-            {nav.login}
-          </Button>
-          <Button to="/registrieren" variant="gold">
-            {nav.cta}
-          </Button>
+          {user ? (
+            <Button to="/app" variant="gold">
+              Zum Kontor →
+            </Button>
+          ) : (
+            <>
+              <Button to="/login" variant="ghost">
+                {nav.login}
+              </Button>
+              <Button to="/registrieren" variant="gold">
+                {nav.cta}
+              </Button>
+            </>
+          )}
         </div>
 
         {/* Burger */}
@@ -99,12 +109,20 @@ export function Navbar() {
                 </li>
               ))}
               <li className="flex gap-3 pt-3">
-                <Button to="/login" variant="outline" className="flex-1" onClick={() => setOpen(false)}>
-                  {nav.login}
-                </Button>
-                <Button to="/registrieren" variant="gold" className="flex-1" onClick={() => setOpen(false)}>
-                  {nav.cta}
-                </Button>
+                {user ? (
+                  <Button to="/app" variant="gold" className="flex-1" onClick={() => setOpen(false)}>
+                    Zum Kontor →
+                  </Button>
+                ) : (
+                  <>
+                    <Button to="/login" variant="outline" className="flex-1" onClick={() => setOpen(false)}>
+                      {nav.login}
+                    </Button>
+                    <Button to="/registrieren" variant="gold" className="flex-1" onClick={() => setOpen(false)}>
+                      {nav.cta}
+                    </Button>
+                  </>
+                )}
               </li>
             </ul>
           </motion.div>

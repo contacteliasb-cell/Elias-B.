@@ -441,28 +441,67 @@ export const register = {
       { value: 'geselle', label: 'Geselle', hint: 'Grundlagen sitzen, ich will rechnen lernen.' },
       { value: 'kaufmann', label: 'Kaufmann', hint: 'Ich suche aktiv oder besitze schon ein Objekt.' },
     ],
+    password: 'Passwort',
+    passwordPlaceholder: 'Mindestens 8 Zeichen',
     privacy: 'Ich habe die Datenschutzerklärung gelesen und bin mit der Verarbeitung meiner Angaben einverstanden.',
   },
   submit: 'Account erstellen — für 0 €',
+  hasAccount: 'Schon dabei?',
+  loginLink: 'Zum Login',
   errors: {
     name: 'Bitte gib deinen Namen ein.',
     email: 'Bitte gib eine gültige E-Mail-Adresse ein.',
+    password: 'Bitte wähle ein Passwort mit mindestens 8 Zeichen.',
     level: 'Bitte wähle dein Erfahrungslevel.',
     privacy: 'Bitte bestätige die Datenschutzerklärung.',
     submit: 'Das hat leider nicht geklappt. Bitte versuch es gleich noch einmal.',
   },
-  success: {
-    title: 'Willkommen im Kontor.',
-    text: 'Du gehörst jetzt zu den Gründungsmitgliedern. Wir melden uns bei dir, sobald dein Zugang freigeschaltet ist — und du erfährst als Erste:r, wenn es losgeht.',
-    back: 'Zurück zur Startseite',
+  confirmEmail: {
+    title: 'Fast geschafft — bestätige deine E-Mail.',
+    text: 'Wir haben dir einen Bestätigungslink geschickt. Klick auf den Link in der E-Mail und melde dich danach an — dann öffnet sich das Kontor für dich.',
+    toLogin: 'Zum Login',
   },
 }
 
 export const login = {
-  title: 'Der Mitgliederbereich öffnet in Kürze',
-  text: 'Wir bauen das Kontor gerade mit den Gründungsmitgliedern auf. Trag dich ein, um als Erste:r Zugang zu bekommen — kostenlos und unverbindlich.',
-  cta: 'Jetzt kostenlos registrieren',
-  back: 'Zurück zur Startseite',
+  title: 'Willkommen zurück im Kontor',
+  subtitle: 'Melde dich mit deiner E-Mail-Adresse an und mach da weiter, wo du aufgehört hast.',
+  fields: {
+    email: 'E-Mail-Adresse',
+    emailPlaceholder: 'deine@email.de',
+    password: 'Passwort',
+    passwordPlaceholder: 'Dein Passwort',
+  },
+  submit: 'Anmelden',
+  forgot: 'Passwort vergessen?',
+  noAccount: 'Noch keinen Account?',
+  registerLink: 'Kostenlos registrieren',
+  errors: {
+    email: 'Bitte gib eine gültige E-Mail-Adresse ein.',
+    password: 'Bitte gib dein Passwort ein.',
+  },
+}
+
+export const resetPassword = {
+  request: {
+    title: 'Passwort vergessen?',
+    text: 'Gib deine E-Mail-Adresse ein — wenn ein Account existiert, senden wir dir einen Link zum Zurücksetzen.',
+    submit: 'Link anfordern',
+    success: 'Wenn ein Account mit dieser Adresse existiert, ist die E-Mail unterwegs. Schau auch im Spam-Ordner nach.',
+    demoHint: 'Demo-Modus: Es wird keine echte E-Mail verschickt. Sobald Supabase konfiguriert ist, funktioniert der Versand automatisch.',
+    back: 'Zurück zum Login',
+  },
+  set: {
+    title: 'Neues Passwort festlegen',
+    text: 'Wähle ein neues Passwort für deinen Account (mindestens 8 Zeichen).',
+    password: 'Neues Passwort',
+    passwordRepeat: 'Neues Passwort wiederholen',
+    submit: 'Passwort speichern',
+    success: 'Dein Passwort wurde geändert. Du kannst dich jetzt anmelden.',
+    errorMatch: 'Die Passwörter stimmen nicht überein.',
+    errorLength: 'Das Passwort muss mindestens 8 Zeichen lang sein.',
+    toLogin: 'Zum Login',
+  },
 }
 
 export const notFound = {
