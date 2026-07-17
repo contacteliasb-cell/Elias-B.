@@ -1,0 +1,122 @@
+import type { WikiArticle } from './types'
+
+export const finanzierungArticles: WikiArticle[] = [
+  {
+    slug: 'eigenkapital',
+    term: 'Eigenkapital',
+    category: 'finanzierung',
+    body: 'Eigenkapital ist der Anteil des Kaufpreises und der Kaufnebenkosten, den du aus eigenen Mitteln bezahlst — im Gegensatz zum Fremdkapital der Bank. Dazu zählen Guthaben, Depots (nach Verkauf), Bausparguthaben und teilweise anerkannte Eigenleistung.\n\nAls Faustregel erwarten viele Banken, dass mindestens die Kaufnebenkosten (etwa 9–12 % des Kaufpreises) aus Eigenkapital kommen. Mehr Eigenkapital senkt den Beleihungsauslauf und damit meist den Zinssatz. Gleichzeitig gilt: Nicht das gesamte Eigenkapital ins Objekt stecken — ein Liquiditätspuffer für Reparaturen und Leerstand ist Teil einer soliden Finanzierung.\n\nEigenkapital lässt sich gezielt aufbauen (Sparquote, Tilgung) und über die Jahre durch Refinanzierung wieder aus bestehenden Objekten herauslösen (Eigenkapital-Recycling).',
+  },
+  {
+    slug: 'bonitaet',
+    term: 'Bonität',
+    category: 'finanzierung',
+    body: 'Bonität bezeichnet deine Kreditwürdigkeit aus Sicht der Bank. Bewertet werden Höhe und Stabilität deines Einkommens, bestehende Verpflichtungen (Kredite, Leasing, Unterhalt), deine SCHUFA-Daten und dein Eigenkapital.\n\nAus Einnahmen minus Lebenshaltung minus bestehende Raten ergibt sich die Kapitaldienstfähigkeit — die maximale Rate, die du dir nach Bankenlogik leisten kannst. Mieteinnahmen des Kaufobjekts werden dabei nur teilweise (oft 70–80 %) angerechnet, als Puffer für Ausfall und Kosten.\n\nBonität lässt sich in 12–24 Monaten aktiv verbessern: Konsumkredite tilgen, Dispo meiden, eine sichtbare Sparquote aufbauen und die SCHUFA-Selbstauskunft auf Fehler prüfen. Eine saubere Bonität ist neben dem Eigenkapital die wichtigste Grundlage guter Konditionen.',
+  },
+  {
+    slug: 'schufa',
+    term: 'SCHUFA',
+    category: 'finanzierung',
+    body: 'Die SCHUFA ist die bekannteste deutsche Wirtschaftsauskunftei. Sie sammelt Daten zu Krediten, Konten, Zahlungsverhalten und errechnet daraus einen Score, den Banken zur Bonitätsprüfung heranziehen.\n\nFür Kreditanfragen relevant: Bündle Finanzierungsanfragen in kurzem Zeitraum, damit sie als eine „Konditionenanfrage" statt vieler „Kreditanfragen" gewertet werden — Letztere können den Score verschlechtern. Dispo-Nutzung und offene Forderungen wirken sich negativ aus.\n\nEinmal jährlich hast du Anspruch auf eine kostenlose Datenkopie (Selbstauskunft) — nutze sie vor einem geplanten Immobilienkauf, um falsche Einträge korrigieren zu lassen. Als Vermieter kannst du von Mietbewerbern eine SCHUFA-BonitätsAuskunft (die spezielle Vermieter-Variante) verlangen.',
+  },
+  {
+    slug: 'annuitaetendarlehen',
+    term: 'Annuitätendarlehen',
+    category: 'finanzierung',
+    body: 'Das Annuitätendarlehen ist die häufigste Form der Immobilienfinanzierung in Deutschland. Du zahlst über die gesamte Zinsbindung eine konstante Monatsrate (die Annuität), die aus zwei Teilen besteht: Zins und Tilgung.\n\nDa Zinsen immer nur auf die verbleibende Restschuld anfallen, sinkt mit jeder Rate der Zinsanteil — und weil die Gesamtrate gleich bleibt, steigt automatisch der Tilgungsanteil. Die Rückzahlung beschleunigt sich also von selbst („Tilgungsturbo").\n\nDie Startaufteilung legst du bei Abschluss fest, z. B. beispielhaft 3,8 % Zins plus 2 % Tilgung = 5,8 % Annuität. Am Ende der Zinsbindung bleibt fast immer eine Restschuld, die über eine Anschlussfinanzierung neu geregelt werden muss.',
+  },
+  {
+    slug: 'tilgung',
+    term: 'Tilgung',
+    category: 'finanzierung',
+    body: 'Die Tilgung ist der Teil deiner Kreditrate, mit dem du das Darlehen tatsächlich zurückzahlst — im Gegensatz zum Zins, der der Preis für das geliehene Geld ist. Beim Annuitätendarlehen gibst du eine „anfängliche Tilgung" an (z. B. 2 %), die über die Laufzeit automatisch steigt.\n\nBuchhalterisch ist die Tilgung kein Aufwand, sondern Vermögensaufbau: Geld wandert von deinem Konto in dein Eigenkapital im Objekt. Ein Objekt kann daher negativen Cashflow haben und trotzdem Vermögen aufbauen. Wichtig: Tilgung ist gebundenes Vermögen — sie zahlt keine Reparatur.\n\nHöhere Tilgung bedeutet Sicherheit und schnellere Schuldenfreiheit, niedrigere Tilgung mehr laufenden Cashflow und Kapitaldienstfähigkeit für weitere Käufe. Die Wahl ist eine Strategieentscheidung.',
+  },
+  {
+    slug: 'zinsbindung',
+    term: 'Zinsbindung',
+    category: 'finanzierung',
+    body: 'Die Zinsbindung ist der Zeitraum, für den der vereinbarte Sollzins fest gilt — üblich sind 10, 15 oder 20 Jahre. Während dieser Zeit ändert sich deine Rate nicht, unabhängig vom Marktzins.\n\nLängere Bindungen kosten meist einen Zinsaufschlag, kaufen dafür aber Planbarkeit. Ein wichtiger Vorteil: Nach § 489 BGB darfst du Darlehen zehn Jahre nach Vollauszahlung mit sechs Monaten Frist kündigen — eine 20-jährige Bindung ist damit asymmetrisch zu deinen Gunsten (bei fallenden Zinsen steigst du aus, bei steigenden bleibst du im günstigen Vertrag).\n\nAm Ende der Zinsbindung ist das Darlehen fast nie vollständig getilgt; die verbleibende Restschuld wird über eine Anschlussfinanzierung zum dann gültigen Zins refinanziert.',
+    legalHint: true,
+  },
+  {
+    slug: 'restschuld',
+    term: 'Restschuld',
+    category: 'finanzierung',
+    body: 'Die Restschuld ist der noch nicht getilgte Teil deines Darlehens zu einem bestimmten Zeitpunkt. Besonders wichtig ist die Restschuld am Ende der Zinsbindung: Sie muss über eine Anschlussfinanzierung zum dann gültigen Marktzins refinanziert werden.\n\nDie Restschuld ist damit die zentrale Risikogröße deiner Finanzierung: Je höher sie am Ende der Bindung ist, desto stärker trifft dich ein möglicher Zinsanstieg. Eine hohe anfängliche Tilgung und Sondertilgungen senken die Restschuld schneller.\n\nDeshalb gehört in jede Kalkulation ein Zinsschock-Stresstest: Trägt das Objekt die Rate noch, wenn die Anschlussfinanzierung beispielhaft zwei Prozentpunkte teurer wird?',
+  },
+  {
+    slug: 'sondertilgung',
+    term: 'Sondertilgung',
+    category: 'finanzierung',
+    body: 'Eine Sondertilgung ist eine außerplanmäßige Rückzahlung zusätzlich zur regulären Rate — etwa aus einem Bonus, einer Erbschaft oder angespartem Guthaben. Sie senkt die Restschuld überproportional und spart über die Restlaufzeit Zinsen.\n\nBanken räumen häufig ein kostenfreies Sondertilgungsrecht ein (üblich: bis 5 % der Darlehenssumme pro Jahr). Wichtig: Dieses Recht muss bei Vertragsabschluss vereinbart werden — nachträglich ist es schwer zu bekommen. Ohne vereinbartes Sondertilgungsrecht kann eine vorzeitige Rückzahlung eine Vorfälligkeitsentschädigung auslösen.\n\nSondertilgungen sind ein flexibles Werkzeug: Sie erlauben schnellere Entschuldung in guten Zeiten, ohne dich über eine dauerhaft höhere Rate zu binden.',
+  },
+  {
+    slug: 'effektivzins',
+    term: 'Effektivzins',
+    category: 'finanzierung',
+    body: 'Der Effektivzins (effektiver Jahreszins) enthält neben dem reinen Sollzins die wesentlichen Kostenbestandteile und die Verrechnungslogik eines Kredits. Er macht Finanzierungsangebote vergleichbar — aber nur bei gleicher Zinsbindungsdauer.\n\nVergleiche Angebote deshalb immer über den Effektivzins, nicht über den Sollzins. Achte zusätzlich auf Nebenschauplätze, die im Effektivzins nicht immer vollständig abgebildet sind: Bereitstellungszinsen, Kosten für Sondertilgungsoptionen oder Teilauszahlungsmöglichkeiten.\n\nEin optisch günstiger Sollzins kann durch ungünstige Nebenbedingungen teuer werden. Der Effektivzins ist ein guter erster Filter, ersetzt aber nicht den Blick ins Kleingedruckte.',
+  },
+  {
+    slug: 'beleihungswert',
+    term: 'Beleihungswert',
+    category: 'finanzierung',
+    body: 'Der Beleihungswert ist der Wert, den die Bank einem Objekt langfristig und vorsichtig beimisst — als Antwort auf die Frage, was im Verwertungsfall verlässlich erzielbar wäre. Er liegt fast immer unter dem Kaufpreis, häufig um 10–20 %.\n\nDie Bank ermittelt ihn je nach Objekt über Vergleichswerte, den Sachwert (Boden plus Gebäude) oder — bei Renditeobjekten — den Ertragswert aus den nachhaltigen Mieteinnahmen. Für dich heißt das: Nicht alles, was du zahlst, akzeptiert die Bank als Sicherheit.\n\nDer Beleihungswert ist Bezugsgröße für den Beleihungsauslauf und damit indirekt für deinen Zinssatz. Ein Objekt, das die Bank konservativ bewertet, solltest auch du kritisch prüfen.',
+  },
+  {
+    slug: 'beleihungsauslauf',
+    term: 'Beleihungsauslauf',
+    category: 'finanzierung',
+    body: 'Der Beleihungsauslauf (Loan-to-Value, LTV) ist das Verhältnis von Darlehenssumme zu Beleihungswert, ausgedrückt in Prozent. Er ist eine der wichtigsten Stellschrauben für deinen Zinssatz.\n\nBanken staffeln ihre Konditionen nach dem Auslauf: Bis 60 % gibt es die besten Zinsen (klassische Pfandbriefgrenze), bis 80 % gute, darüber wird jeder Schritt teurer. Daraus folgt eine oft übersehene Möglichkeit: Manchmal lohnt es sich, mit etwas mehr Eigenkapital gezielt unter eine Schwelle (etwa 80 %) zu rutschen — der Zinsvorteil über die Laufzeit kann den Mehreinsatz übersteigen.\n\nBeispiel: 160.000 € Darlehen bei 200.000 € Beleihungswert = 80 % Auslauf. Vollfinanzierungen über 100 % sind möglich, aber deutlich teurer.',
+  },
+  {
+    slug: 'grundschuld',
+    term: 'Grundschuld',
+    category: 'finanzierung',
+    body: 'Die Grundschuld ist das im Grundbuch (Abteilung III) eingetragene Verwertungsrecht der Bank an deinem Objekt — ihre Sicherheit für das Darlehen. Sie ist der Grund, warum Immobilienkredite deutlich günstiger sind als unbesicherte Konsumkredite.\n\nDie Grundschuld ist abstrakt: Sie kann höher sein als das aktuelle Darlehen und nach vollständiger Tilgung „stehen gelassen" werden, um sie für künftige Finanzierungen wiederzuverwenden — das spart Notarkosten bei einer späteren Refinanzierung.\n\nGrundschulden des Verkäufers wirken beim Kauf oft bedrohlich, werden aber im Regelfall aus dem Kaufpreis abgelöst und gelöscht; der Notar sichert das über Treuhandauflagen. Die Rangfolge im Grundbuch entscheidet, wer im Verwertungsfall zuerst bedient wird — Banken bestehen daher auf dem ersten Rang.',
+    legalHint: true,
+  },
+  {
+    slug: 'kapitaldienst',
+    term: 'Kapitaldienst',
+    category: 'finanzierung',
+    body: 'Der Kapitaldienst ist die Summe aus Zins und Tilgung, die du regelmäßig an die Bank zahlst — also deine gesamte Darlehensrate. In der Cashflow-Rechnung wird der Kapitaldienst vom operativen Überschuss abgezogen, um den Cashflow vor Steuern zu ermitteln.\n\nDie Kapitaldienstfähigkeit beschreibt, welche Rate du dir nach Bankenlogik leisten kannst: Einnahmen (inkl. anteilig angerechneter Miete) minus Lebenshaltung minus bestehende Verpflichtungen. Sie ist ein Kernkriterium der Bonitätsprüfung.\n\nWichtig für die Objektbewertung: Ein Objekt kann operativ gesund sein (Überschuss vor Kapitaldienst), aber durch zu aggressive Finanzierung negativen Cashflow liefern — das ist ein Finanzierungsproblem, kein Objektproblem.',
+  },
+  {
+    slug: 'anschlussfinanzierung',
+    term: 'Anschlussfinanzierung',
+    category: 'finanzierung',
+    body: 'Die Anschlussfinanzierung ist die neue Finanzierung der Restschuld, die am Ende der Zinsbindung verbleibt. Da das Darlehen dann selten vollständig getilgt ist, muss der Restbetrag zum aktuellen Marktzins weiterfinanziert werden.\n\nDu kannst bei deiner Bank verlängern (Prolongation) oder zu einer anderen Bank wechseln (Umschuldung) — Letzteres lohnt oft, weil Vergleichsangebote Druck erzeugen. Mit einem Forward-Darlehen lässt sich das Zinsniveau bereits einige Jahre vor Ablauf sichern (gegen einen Aufschlag), was bei erwartet steigenden Zinsen interessant sein kann.\n\nDie Anschlussfinanzierung ist der Moment, in dem sich das Zinsänderungsrisiko realisiert — deshalb ist eine niedrige Restschuld (hohe Tilgung, Sondertilgungen) die beste Vorsorge. Sie ist außerdem ein guter Zeitpunkt, um über eine Aufstockung (Refinanzierung) nachzudenken.',
+  },
+  {
+    slug: 'bereitstellungszinsen',
+    term: 'Bereitstellungszinsen',
+    category: 'finanzierung',
+    body: 'Bereitstellungszinsen berechnet die Bank auf den zugesagten, aber noch nicht abgerufenen Darlehensbetrag — und zwar nach Ablauf der bereitstellungszinsfreien Zeit (oft nur drei Monate). Üblich sind etwa 0,25 % pro Monat, also rund 3 % pro Jahr auf Geld, das du noch gar nicht nutzt.\n\nBesonders relevant sind sie bei Sanierungen und Neubau, wo zwischen Zusage und vollständiger Auszahlung Monate liegen. Gegenmittel: eine passend lange bereitstellungszinsfreie Zeit verhandeln (12 Monate oder mehr bei größeren Vorhaben) und den Auszahlungsplan realistisch takten.\n\nEin optisch günstiges Darlehen kann durch hohe Bereitstellungszinsen teuer werden — deshalb gehören sie auf die Verhandlungs-Checkliste beim Bankgespräch.',
+  },
+  {
+    slug: 'vorfaelligkeitsentschaedigung',
+    term: 'Vorfälligkeitsentschädigung',
+    category: 'finanzierung',
+    body: 'Die Vorfälligkeitsentschädigung ist der Betrag, den die Bank verlangt, wenn du ein Darlehen während der Zinsbindung vorzeitig zurückzahlst — etwa weil du das Objekt verkaufst. Sie ersetzt der Bank ihren entgangenen Zinsgewinn und kann je nach Restlaufzeit und Zinsniveau fünfstellig ausfallen.\n\nVereinbarte Sondertilgungen sind davon ausgenommen. Bei berechtigtem Interesse (z. B. Verkauf der Immobilie) muss die Bank einer Ablösung zustimmen — aber eben gegen Entschädigung. Nach zehn Jahren ab Vollauszahlung greift das gesetzliche Kündigungsrecht nach § 489 BGB, dann entfällt die Entschädigung.\n\nWer einen Verkauf für möglich hält, sollte das in der Finanzierungsstruktur berücksichtigen (kürzere Bindung, Sondertilgungsrechte) und die Vorfälligkeitsentschädigung nicht unterschätzen.',
+    legalHint: true,
+  },
+  {
+    slug: 'kfw',
+    term: 'KfW-Förderung',
+    category: 'finanzierung',
+    body: 'Die KfW (Kreditanstalt für Wiederaufbau) ist die staatliche Förderbank des Bundes. Sie vergibt zinsverbilligte Darlehen und Tilgungszuschüsse, vor allem für energieeffizienten Neubau, energetische Sanierung und den Umstieg auf erneuerbare Heiztechnik.\n\nWichtig: Viele KfW-Kredite beantragst du nicht direkt, sondern über deine finanzierende Bank (Durchleitungsprinzip) — sprich Fördermittel im Bankgespräch also aktiv an. Und: Fast alle Programme fördern nur Vorhaben, die zum Antragszeitpunkt noch nicht begonnen haben. Erst beantragen, dann beauftragen.\n\nProgramme und Konditionen ändern sich mehrmals im Jahr — den aktuellen Stand prüfst du tagesaktuell auf kfw.de sowie beim BAFA und deiner Landesförderbank. Keine Kalkulation aufbauen, die nur mit Förderung funktioniert.',
+    legalHint: true,
+  },
+  {
+    slug: 'refinanzierung',
+    term: 'Refinanzierung',
+    category: 'finanzierung',
+    body: 'Refinanzierung bezeichnet die Neuordnung einer bestehenden Finanzierung — häufig, um durch Tilgung und Wertsteigerung gebundenes Eigenkapital wieder herauszulösen (Eigenkapital-Recycling). Dabei wird ein Darlehen aufgestockt oder neu abgeschlossen, und der freigesetzte Betrag finanziert den nächsten Kauf.\n\nSinnvolle Zeitpunkte sind das Ende der Zinsbindung, eine erfolgreiche Wertsteigerung oder ein attraktives neues Objekt. Die stehen gelassene Grundschuld macht Nachbeleihungen oft günstig.\n\nRefinanzierung erhöht den Gesamt-Verschuldungsgrad, der Leverage-Effekt wirkt dann über das ganze Portfolio — in beide Richtungen. Deshalb nur mit robustem Cashflow-Stresstest und Liquiditätspuffer einsetzen und nie bis zum Anschlag ausreizen. Diszipliniert eingesetzt ist Refinanzierung einer der stärksten Wachstumshebel.',
+  },
+  {
+    slug: 'selbstauskunft',
+    term: 'Selbstauskunft',
+    category: 'finanzierung',
+    body: 'Die Selbstauskunft ist eine strukturierte Übersicht deiner finanziellen Verhältnisse, die die Bank zur Finanzierungsprüfung verlangt: Einkommen, Vermögen, bestehende Verbindlichkeiten, Ausgaben und persönliche Angaben.\n\nSie ist Teil deiner Unterlagen-Mappe fürs Bankgespräch — zusammen mit Gehaltsabrechnungen, Steuerbescheid, Eigenkapitalnachweisen und Objektunterlagen. Vollständigkeit und Ordnung signalisieren genau das, was Banken schätzen: Verlässlichkeit.\n\nWichtig: Beschönige nichts. Banken prüfen alle Angaben nach; eine „vergessene" Kreditrate oder geschönte Zahlen zerstören das Vertrauen und können rechtliche Folgen haben. Der Begriff Selbstauskunft wird auch im Mietrecht verwendet (Mieterselbstauskunft) — dort füllt der Mietbewerber sie für den Vermieter aus.',
+  },
+]

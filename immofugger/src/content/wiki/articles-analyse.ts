@@ -1,0 +1,121 @@
+import type { WikiArticle } from './types'
+
+export const analyseArticles: WikiArticle[] = [
+  {
+    slug: 'mietrendite',
+    term: 'Mietrendite',
+    category: 'analyse',
+    body: 'Die Mietrendite misst, wie viel Ertrag ein Objekt im Verhältnis zum eingesetzten Kapital bringt. Man unterscheidet zwei Größen.\n\nDie Brutto-Mietrendite ist die Jahreskaltmiete geteilt durch den Kaufpreis (× 100) — ein schneller Vergleichswert ohne Nebenkosten und Bewirtschaftung. Beispiel: 9.000 € Jahresmiete auf 200.000 € = 4,5 %.\n\nDie Netto-Mietrendite ist ehrlicher: (Jahreskaltmiete − nicht umlagefähige Kosten) ÷ (Kaufpreis + Kaufnebenkosten). Sie liegt typischerweise 0,8 bis 1,5 Prozentpunkte unter der Bruttorendite. Aussagekräftig wird die Rendite erst im Vergleich — mit dem lokalen Markt und mit deinem Finanzierungszins: Liegt die Nettorendite über dem Zins, arbeitet der Fremdkapital-Hebel für dich.',
+  },
+  {
+    slug: 'kaufpreisfaktor',
+    term: 'Kaufpreisfaktor',
+    category: 'analyse',
+    body: 'Der Kaufpreisfaktor (auch Vervielfältiger) ist der Kaufpreis geteilt durch die Jahreskaltmiete — der Kehrwert der Brutto-Mietrendite. „Faktor 25" bedeutet: Du zahlst das 25-Fache der Jahresmiete.\n\nJe höher der Faktor, desto teurer ist das Objekt im Verhältnis zur Miete und desto niedriger die Bruttorendite. Faktor 25 entspricht 4 % Bruttorendite, Faktor 20 entspricht 5 %, Faktor 33 entspricht 3 %.\n\nDer Faktor eignet sich gut zum schnellen Vergleich innerhalb eines Marktes: Liegt ein Objekt über oder unter dem ortsüblichen Faktor? In gefragten A-Lagen sind hohe Faktoren normal (Sicherheit kostet Rendite), in schwächeren Lagen niedrige Faktoren (Risikoprämie). Der Faktor ersetzt aber keine Netto-Betrachtung.',
+  },
+  {
+    slug: 'cashflow',
+    term: 'Cashflow',
+    category: 'analyse',
+    body: 'Der Cashflow ist der Geldbetrag, der monatlich übrig bleibt oder fehlt, nachdem alle laufenden Zahlungen geflossen sind. Er beantwortet die Frage: Trägt sich das Objekt?\n\nDie Rechnung als Wasserfall: Kaltmiete minus nicht umlagefähige Bewirtschaftung minus Instandhaltungsansatz minus kalkulatorischer Mietausfall = operativer Überschuss; davon minus Kapitaldienst (Zins + Tilgung) = Cashflow vor Steuern.\n\nPositiver Cashflow bedeutet, das Objekt zahlt dich; negativer, dass du monatlich zuschießt. Ein bewusst kalkulierter, tragbarer negativer Cashflow kann akzeptabel sein, weil die Tilgung parallel Vermögen aufbaut. Gefährlich ist nur der ungeplante negative Cashflow aus vergessenen Kosten. Rechne immer mehrere Szenarien (Basis, Stress, Chance).',
+  },
+  {
+    slug: 'kaufnebenkosten',
+    term: 'Kaufnebenkosten',
+    category: 'analyse',
+    body: 'Kaufnebenkosten sind die zusätzlichen Kosten beim Immobilienerwerb, die über den Kaufpreis hinausgehen: Grunderwerbsteuer (je Bundesland unterschiedlich), Notar- und Grundbuchkosten (zusammen rund 1,5–2 %) und gegebenenfalls Maklerprovision.\n\nZusammen ergeben sich meist 9–12 % des Kaufpreises. Bei 250.000 € sind das 22.000 bis 30.000 € — Geld, das sofort „weg" ist. Die Nebenkosten sind verlorene Kosten (sie erhöhen nicht den Objektwert), werden von Banken üblicherweise nicht mitfinanziert (daher definieren sie oft das Mindest-Eigenkapital) und drücken die Netto-Rendite.\n\nRechne deshalb immer mit der Gesamtinvestition (Kaufpreis + Nebenkosten), nicht nur mit dem Kaufpreis. Der Kaufnebenkosten-Rechner in den Werkzeugen zeigt dir die Summe je Bundesland.',
+  },
+  {
+    slug: 'expose',
+    term: 'Exposé',
+    category: 'analyse',
+    body: 'Ein Exposé ist die Verkaufsunterlage eines Objekts — mit Fotos, Beschreibung, Kennzahlen und oft einer beworbenen Rendite. Wichtig: Ein Exposé ist Werbung, kein Gutachten.\n\nSuche die Kernfakten (Kaufpreis, Wohnfläche, Ist-Kaltmiete, Hausgeld mit Aufteilung, Baujahr, Energiewerte, Zustand) und achte darauf, was fehlt — Lücken sind oft aussagekräftiger als der Inhalt. Übersetze Marketing-Sprache: „Handwerkerobjekt mit Potenzial" heißt Sanierungsfall, „vermietung problemlos möglich" heißt leerstehend.\n\nRechne jede beworbene Rendite mit deiner eigenen Formel nach — mit der Ist-Miete statt Soll-Miete und inklusive Nebenkosten. Der 10-Minuten-Schnellcheck entscheidet dann: ablehnen, anfragen oder besichtigen.',
+  },
+  {
+    slug: 'mietausfallwagnis',
+    term: 'Mietausfallwagnis',
+    category: 'analyse',
+    body: 'Das Mietausfallwagnis ist ein kalkulatorischer Puffer für Mietausfall und Leerstand, der in einer seriösen Rendite- und Cashflow-Rechnung berücksichtigt wird. Üblich sind Ansätze von 2–4 % der Jahreskaltmiete, in schwächeren Lagen mehr.\n\nDer Gedanke: Kein Objekt ist dauerhaft zu 100 % vermietet und zahlt zu 100 % pünktlich. Mieterwechsel, kurzer Leerstand oder ein Zahlungsausfall kommen vor. Wer mit 0 % Ausfall rechnet, betreibt Schönrechnerei.\n\nDas Mietausfallwagnis ist eine Kalkulationsgröße, keine exakte Prognose — wichtig ist, dass es überhaupt und konsistent in jede Rechnung einfließt. In Kombination mit Instandhaltungsansatz und realistischen Bewirtschaftungskosten macht es aus der optimistischen Bruttorechnung eine belastbare Nettobetrachtung.',
+  },
+  {
+    slug: 'ertragswertverfahren',
+    term: 'Ertragswertverfahren',
+    category: 'analyse',
+    body: 'Das Ertragswertverfahren ist eine Methode zur Immobilienbewertung, die sich am nachhaltig erzielbaren Ertrag orientiert — dem entscheidenden Maßstab für Renditeobjekte (vermietete Wohnungen, Mehrfamilienhäuser, Gewerbe).\n\nVereinfacht: Der Bodenwert und der Gebäudeertragswert werden getrennt betrachtet; aus den nachhaltigen Reinerträgen (Mieten minus Bewirtschaftungskosten) wird über einen Kapitalisierungszins der Ertragswert des Gebäudes abgeleitet. Banken nutzen es zur Ermittlung des Beleihungswerts bei Renditeobjekten.\n\nNeben dem Ertragswertverfahren gibt es das Vergleichswertverfahren (typisch für Eigentumswohnungen und Einfamilienhäuser) und das Sachwertverfahren (Bodenwert plus Herstellungswert des Gebäudes). Welches Verfahren dominiert, hängt von Objektart und Nutzung ab.',
+  },
+  {
+    slug: 'besichtigung',
+    term: 'Besichtigung',
+    category: 'analyse',
+    body: 'Die Besichtigung ist deine wichtigste Datenerhebung vor dem Kauf — 45 Minuten, die über hunderttausende Euro entscheiden. Sie dient der Verifikation, nicht dem Erstkontakt: Unterlagen liest du vorher.\n\nBewährt ist ein 5-Zonen-Rundgang: Umfeld (Straße, Lärm, Nachbarhäuser), Gebäudehülle (Dach, Fassade, Fenster, Treppenhaus), Keller und Technik (Feuchtegeruch, Heizung mit Typenschild, Leitungen), Wohnung (Raum für Raum mit festem Blickprogramm), Dokumente und Gespräch (Fragenliste). Fotografiere systematisch — nach drei Besichtigungen verschwimmen die Erinnerungen.\n\nPrüfe die „großen Fünf" (Dach, Heizung, Fenster, Elektrik, Feuchtigkeit) und bei vermieteten Objekten das Mietverhältnis. Werte innerhalb von 24 Stunden aus und entscheide: Zweittermin, begründetes Angebot oder Absage. Ein zweiter Besuch zu anderer Tageszeit lohnt sich.',
+  },
+  {
+    slug: 'bausachverstaendiger',
+    term: 'Bausachverständiger',
+    category: 'analyse',
+    body: 'Ein Bausachverständiger (Baugutachter) beurteilt den technischen Zustand einer Immobilie und deckt Mängel auf, die Laien übersehen — Feuchtigkeit, Schäden an Tragwerk und Dach, versteckte Sanierungsbedarfe.\n\nEine Begehung kostet meist 400–800 € und lohnt sich bei jedem ernsthaften Kandidaten mit unklarem Zustand oder Baujahr vor etwa 1990. Der Bericht ist doppelt wertvoll: Er schützt vor einem teuren Fehlkauf und liefert zugleich ein dokumentiertes Verhandlungsargument für einen Preisnachlass.\n\nRechnung: Ein einziger übersehener struktureller Schaden kostet leicht das Fünfzig- bis Hundertfache des Honorars. Für den unklaren Altbau ist der Sachverständige damit die günstigste Versicherung des ganzen Kaufs. Er gehört — neben Steuerberater und ggf. Fachanwalt — zum Beraterteam.',
+  },
+  {
+    slug: 'sanierungsstau',
+    term: 'Sanierungsstau',
+    category: 'analyse',
+    body: 'Sanierungsstau bezeichnet aufgeschobene Instandhaltungs- und Modernisierungsmaßnahmen, die sich über die Jahre angesammelt haben — von der überalterten Heizung über undichte Fenster bis zur maroden Fassade.\n\nSanierungsstau ist kein Ausschlusskriterium — falsch bepreister Sanierungsstau schon. Der Dreisatz: Positionen erfassen und grob schätzen (Handwerker-Richtwerte, im Zweifel Sachverständiger), einen Puffer von 20–30 % aufschlagen (Baukosten überraschen fast nie nach unten) und die Gesamtsumme dokumentiert vom Angebotspreis abziehen.\n\nBei Eigentumswohnungen zeigt sich drohender Sanierungsstau am Gemeinschaftseigentum in den Protokollen und an der Höhe der Instandhaltungsrücklage — wird zu wenig angespart, kommt die Sanierung später als Sonderumlage. Gezielt genutzt (günstig kaufen, gefördert sanieren) kann Sanierungsstau sogar ein Wertschöpfungshebel sein.',
+  },
+  {
+    slug: 'energieausweis',
+    term: 'Energieausweis',
+    category: 'analyse',
+    body: 'Der Energieausweis ist ein Pflichtdokument, das die energetische Qualität eines Gebäudes in Effizienzklassen (A+ bis H) und über Energieträger darstellt. Er muss bei Verkauf und Vermietung vorgelegt werden.\n\nSchlechte Klassen (F–H) bedeuten höhere Nebenkosten für Mieter (erschwerte Vermietung) und wahrscheinliche Sanierungspflichten und -kosten in der Zukunft — aber auch Einkaufschancen, wenn der Preis das abbildet und Förderung nutzbar ist.\n\nWichtig ist die Unterscheidung: Der Verbrauchsausweis spiegelt das Heizverhalten der bisherigen Bewohner (sparsame Nutzer schönen die Werte), der Bedarfsausweis bewertet die Substanz des Gebäudes selbst. Bei alten, unsanierten Objekten ist der Bedarfsausweis der ehrlichere Maßstab.',
+    legalHint: true,
+  },
+  {
+    slug: 'mikrolage',
+    term: 'Mikrolage',
+    category: 'markt',
+    body: 'Die Mikrolage beschreibt das unmittelbare Umfeld eines Objekts — die Straße, den Häuserblock, das direkte Viertel. Innerhalb derselben Stadt können 500 Meter über Wohnqualität und Wiederverkaufswert entscheiden.\n\nRelevante Faktoren: Entfernung zu ÖPNV, Einkaufsmöglichkeiten, Schulen und Ärzten; Lärmquellen wie Hauptstraßen, Bahnlinien oder Gewerbe; der Pflegezustand der Nachbarhäuser; Grünflächen und Aufenthaltsqualität.\n\nDie Mikrolage prüfst du mit eigenen Augen und zu verschiedenen Tageszeiten — eine Straße, die dienstags um 11 Uhr idyllisch wirkt, kann freitagabends anders sein. Gespräche mit Nachbarn liefern Informationen, die in keiner Statistik stehen. Zusammen mit der Makrolage ergibt sie das vollständige Standortbild.',
+  },
+  {
+    slug: 'makrolage',
+    term: 'Makrolage',
+    category: 'markt',
+    body: 'Die Makrolage beschreibt Stadt und Region eines Objekts: Bevölkerungsentwicklung, Wirtschaftsstruktur, Arbeitsmarkt und die übergeordnete Preis- und Mietentwicklung.\n\nLeitfragen: Wächst oder schrumpft die Bevölkerung? Ist die Arbeitgeberlandschaft breit aufgestellt oder hängt alles an einem einzigen Werk? Wie haben sich Kaufpreise und Mieten über fünf bis zehn Jahre entwickelt? Diese Daten sind öffentlich — Statistikämter, Zensus, Mietspiegel und Preisatlanten der Portale.\n\nFaustregel: Stabile oder wachsende Bevölkerung plus diversifizierte Wirtschaft schlägt kurzfristige Boom-Storys. Der Markt sortiert Städte grob in A- (Metropolen), B- (Großstädte) und C-/D-Lagen (Mittel- und Kleinstädte). Für viele Einsteiger liegt der Sweet Spot in soliden B-Städten und im Speckgürtel der A-Städte.',
+  },
+  {
+    slug: 'mietspiegel',
+    term: 'Mietspiegel',
+    category: 'markt',
+    body: 'Der Mietspiegel ist eine von Städten oder Gemeinden erstellte Übersicht der ortsüblichen Vergleichsmieten, gegliedert nach Wohnungsmerkmalen wie Größe, Baujahr, Ausstattung und Lage. Er ist ein zentrales Werkzeug für Mieterhöhungen und die Mietpreisbremse.\n\nMan unterscheidet den einfachen Mietspiegel (von der Gemeinde erstellt) und den qualifizierten Mietspiegel (nach wissenschaftlichen Grundsätzen, mit höherer rechtlicher Bindungswirkung). Für Mieterhöhungen bis zur ortsüblichen Vergleichsmiete ist der Mietspiegel eine anerkannte Begründung.\n\nFür Investoren ist der Mietspiegel doppelt nützlich: Er zeigt, ob eine bestehende Miete Luft nach oben hat (Potenzial), und dient bei Neuvermietung als Orientierung im Rahmen der Mietpreisbremse. Nicht jede Stadt hat einen Mietspiegel — dann helfen Vergleichsangebote.',
+    legalHint: true,
+  },
+  {
+    slug: 'leerstand',
+    term: 'Leerstand',
+    category: 'markt',
+    body: 'Leerstand bezeichnet nicht vermietete Wohn- oder Gewerbeeinheiten. Für den einzelnen Vermieter ist Leerstand direkter Ertragsausfall bei laufenden Kosten; für einen ganzen Standort ist eine hohe Leerstandsquote ein Warnsignal.\n\nAuf Objektebene wird kurzer Leerstand (Mieterwechsel, Renovierung) über das Mietausfallwagnis kalkuliert. Struktureller Leerstand — dauerhaft schwer vermietbare Einheiten — ist dagegen ein ernstes Risiko und drückt Wert und Wiederverkäuflichkeit.\n\nAuf Marktebene ist steigender Leerstand (viele „Zu vermieten"-Schilder, hohe Leerstandsquote) ein Zeichen sinkender Nachfrage — oft in schrumpfenden Regionen. Sinkender Leerstand deutet dagegen auf Aufwertung hin. Die Leerstandsquote ist damit eine wichtige Kennzahl sowohl in der Standort- als auch in der Portfolioanalyse.',
+  },
+  {
+    slug: 'makler',
+    term: 'Makler',
+    category: 'markt',
+    body: 'Ein Immobilienmakler vermittelt Kauf- oder Mietverträge zwischen Eigentümern und Interessenten und erhält dafür eine Provision. Wichtig zu verstehen: Der Makler arbeitet in der Regel für den Verkäufer beziehungsweise für seine Provision — er ist kein neutraler Berater.\n\nDas macht ihn nicht zum Gegner: Ein guter Makler ist an reibungslosen Abschlüssen interessiert und kann dir als verlässlichem, gut vorbereitetem Käufer Objekte vor der Veröffentlichung zeigen (Off-Market). Professionelles Auftreten und schnelle, verbindliche Kommunikation zahlen sich doppelt aus.\n\nDeine Aufgabe bleibt, Fakten von Verkaufsverpackung zu trennen und jede Angabe selbst zu prüfen. Beziehungen zu Maklern gehören zu den wertvollsten Deal-Quellen — wer einmal schnell und zuverlässig abgeschlossen hat, bekommt den nächsten Anruf zuerst.',
+  },
+  {
+    slug: 'maklerprovision',
+    term: 'Maklerprovision',
+    category: 'markt',
+    body: 'Die Maklerprovision (Courtage) ist das Honorar des Maklers für die erfolgreiche Vermittlung. Sie zählt zu den Kaufnebenkosten und ist regional unterschiedlich hoch — üblich sind je nach Region etwa 2 bis 3,57 % des Kaufpreises inklusive Mehrwertsteuer für den Käuferanteil.\n\nSeit Dezember 2020 gilt beim Verkauf von Wohnungen und Einfamilienhäusern an Verbraucher das Prinzip der Provisionsteilung: Wer den Makler beauftragt, trägt mindestens die Hälfte; der Käufer zahlt höchstens so viel wie der Verkäufer. Das hat die frühere Praxis, dem Käufer die volle Provision aufzubürden, weitgehend beendet.\n\nBeim Mietvertrag gilt das Bestellerprinzip: In der Regel zahlt, wer den Makler beauftragt hat — meist der Vermieter. Ein Kauf direkt vom Eigentümer (ohne Makler) spart die größte Einzelposition der Nebenkosten.',
+    legalHint: true,
+  },
+  {
+    slug: 'bebauungsplan',
+    term: 'Bebauungsplan',
+    category: 'markt',
+    body: 'Der Bebauungsplan (B-Plan) ist ein verbindliches städtebauliches Regelwerk der Gemeinde. Er legt für ein bestimmtes Gebiet fest, was und wie gebaut werden darf: Art und Maß der Nutzung, Bauweise, überbaubare Flächen, Geschosszahl, teils Gestaltung.\n\nFür Investoren ist der Blick in die Planungsunterlagen der Gemeinde wertvoll — nicht nur der geltende B-Plan, sondern auch geplante Änderungen: Neubaugebiete, Straßenprojekte, Nachverdichtung, Gewerbeansiedlungen. Solche Vorhaben werten eine Mikrolage auf oder ab, lange bevor es sich in den Preisen zeigt.\n\nEin geplanter Bahnhalt oder Hochschul-Campus in der Nähe kann eine heutige B-Lage in fünf Jahren aufwerten; eine geplante Schnellstraße direkt am Haus umgekehrt. Bebauungspläne und Lärmkartierungen sind öffentlich einsehbar und gehören zur gründlichen Lageanalyse.',
+  },
+  {
+    slug: 'off-market',
+    term: 'Off-Market',
+    category: 'markt',
+    body: 'Off-Market bezeichnet Immobilien, die verkauft werden, ohne öffentlich inseriert zu sein — abseits der großen Portale. Viele Eigentümer bevorzugen den diskreten Verkauf: aus Gründen der Vertraulichkeit, um Aufwand zu vermeiden oder damit Mieter nichts merken.\n\nGerade dort liegen oft die interessanteren Gelegenheiten: weniger Konkurrenz, mehr Verhandlungsspielraum, keine Bieterverfahren. Off-Market-Deals erreichen dich über Beziehungen — Makler, die dich als schnellen, verlässlichen Käufer kennen; Hausverwaltungen; Steuerberater und Notare; andere Investoren, die ein Objekt weiterreichen.\n\nDer Schlüssel ist Reputation: Wer einmal professionell und zuverlässig abgeschlossen hat, bekommt den nächsten Anruf zuerst. Off-Market ist deshalb weniger eine Suchstrategie als ein Ergebnis von Netzwerk und gutem Ruf.',
+  },
+]
