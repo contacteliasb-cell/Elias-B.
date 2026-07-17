@@ -283,6 +283,46 @@ export const tools = {
       negative: 'Negativer Cashflow — du legst monatlich drauf.',
     },
   },
+  extras: {
+    title: 'Kaufnebenkosten-Rechner',
+    description: 'Was kostet der Kauf wirklich? Grunderwerbsteuer nach Bundesland, Notar, Grundbuch und optional Makler.',
+    inputs: {
+      price: 'Kaufpreis',
+      state: 'Bundesland (Grunderwerbsteuer)',
+      notary: 'Notar & Grundbuch',
+      broker: 'Maklerprovision',
+    },
+    results: {
+      tax: 'Grunderwerbsteuer',
+      notary: 'Notar & Grundbuch',
+      broker: 'Maklerprovision',
+      sum: 'Kaufnebenkosten gesamt',
+      total: 'Gesamtinvestition',
+      percentHint: 'Anteil am Kaufpreis',
+    },
+    stateNote: 'Grunderwerbsteuersätze Stand',
+    stateDisclaimer: 'ohne Gewähr — bitte den aktuellen Satz deines Bundeslandes prüfen.',
+  },
+  annuity: {
+    title: 'Annuitäten-Rechner',
+    description: 'Monatliche Rate, Restschuld nach der Zinsbindung und der Tilgungsverlauf — auf einen Blick.',
+    inputs: {
+      loan: 'Darlehenssumme',
+      interest: 'Sollzins p. a.',
+      repayment: 'Anfängliche Tilgung p. a.',
+      years: 'Zinsbindung',
+    },
+    results: {
+      rate: 'Monatliche Rate',
+      paidInterest: 'Gezahlte Zinsen (Zinsbindung)',
+      paidRepayment: 'Getilgt (Zinsbindung)',
+      remaining: 'Restschuld nach Zinsbindung',
+      chartTitle: 'Tilgungsverlauf',
+      chartRemaining: 'Restschuld',
+      chartLabelStart: 'Start',
+      chartLabelEnd: 'Ende Bindung',
+    },
+  },
 }
 
 export const community = {
