@@ -38,7 +38,7 @@ export function DashboardPage() {
     <div>
       {/* Begrüßung */}
       <div className="mb-8">
-        <h1 className="font-display text-3xl font-semibold text-parchment md:text-4xl">
+        <h1 className="font-display text-3xl font-semibold text-parchment break-words md:text-4xl">
           Willkommen zurück im Kontor, {user?.displayName}
         </h1>
         <p className="mt-1.5 text-slateink">
@@ -65,9 +65,9 @@ export function DashboardPage() {
             {RANKS.map((r, i) => {
               const reached = i <= rankIndex
               return (
-                <li key={r.slug} className="flex flex-col items-center gap-2 text-center">
+                <li key={r.slug} className="flex min-w-0 flex-1 flex-col items-center gap-2 px-0.5 text-center">
                   <span
-                    className={`flex h-7 w-7 items-center justify-center rounded-full border font-mono text-[11px] font-semibold ${
+                    className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border font-mono text-[11px] font-semibold ${
                       i === rankIndex
                         ? 'border-gold bg-gold text-night shadow-gold-glow'
                         : reached
@@ -77,7 +77,9 @@ export function DashboardPage() {
                   >
                     {i + 1}
                   </span>
-                  <span className={`text-[10px] md:text-xs ${reached ? 'text-parchment-dim' : 'text-slateink'}`}>{r.name}</span>
+                  <span className={`w-full truncate text-[10px] md:text-xs ${reached ? 'text-parchment-dim' : 'text-slateink'}`}>
+                    {r.name}
+                  </span>
                 </li>
               )
             })}
@@ -124,7 +126,7 @@ export function DashboardPage() {
       {/* Vorschauen */}
       <div className="grid gap-5 lg:grid-cols-2">
         {/* Kalender */}
-        <section className="kontor-card p-5">
+        <section className="kontor-card min-w-0 p-5">
           <div className="mb-3 flex items-center justify-between">
             <h2 className="flex items-center gap-2 font-display text-lg font-semibold text-parchment">
               <CalendarDays className="h-[18px] w-[18px] text-gold" /> Nächste Termine
@@ -154,7 +156,7 @@ export function DashboardPage() {
         </section>
 
         {/* Kontor */}
-        <section className="kontor-card p-5">
+        <section className="kontor-card min-w-0 p-5">
           <div className="mb-3 flex items-center justify-between">
             <h2 className="flex items-center gap-2 font-display text-lg font-semibold text-parchment">
               <MessagesSquare className="h-[18px] w-[18px] text-gold" /> Neu im Kontor

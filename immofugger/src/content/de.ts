@@ -62,6 +62,8 @@ export type FeatureCard = {
   title: string
   description: string
   mockup: FeatureMockup
+  /** true → als „Coming Soon" gekennzeichnet (Feature noch nicht real verfügbar) */
+  soon?: boolean
 }
 
 export const features: {
@@ -103,6 +105,7 @@ export const features: {
     {
       id: 'deals',
       title: 'Objekt-Analysen',
+      soon: true,
       description:
         'Regelmäßige, tiefgehende Deal-Reviews echter, anonymisierter Beispielobjekte: Zahlen, Risiken, Standortbewertung und Verhandlungsansätze — damit du lernst, wie Profis rechnen.',
       mockup: {
@@ -120,6 +123,7 @@ export const features: {
     {
       id: 'market',
       title: 'Markt-Updates',
+      soon: true,
       description:
         'Wöchentliche Zusammenfassungen zu Zinsen, Kaufpreisen, Mietmärkten und Gesetzesänderungen. Wir lesen die Berichte — du bekommst die Essenz und sparst Stunden an Recherche.',
       mockup: {
@@ -371,16 +375,15 @@ export const pricing = {
     { label: 'Der Fugger-Blueprint: kompletter Lernpfad', soon: false },
     { label: 'Alle 5 Stufen des Fugger-Pfads mit Meilensteinen', soon: false },
     { label: 'Immobilien-Wiki mit vernetzten Artikeln', soon: false },
-    { label: 'Objekt-Analysen & Deal-Reviews', soon: false },
-    { label: 'Wöchentliche Markt-Updates', soon: false },
-    { label: 'Monatsreport: Zinsen, Preise, Gesetze', soon: false },
-    { label: 'Community-Chats nach Level', soon: false },
-    { label: 'Live Q&A-Calls', soon: false },
-    { label: 'Gemeinsame Objektbesprechungen', soon: false },
-    { label: 'Termin-Kalender (Zinsentscheide, Fristen)', soon: false },
-    { label: 'Monatliche Challenges mit Feedback', soon: false },
-    { label: 'Mietrendite- & Cashflow-Rechner', soon: false },
-    { label: 'Mitglieder-Spotlights & 1:1-Feedback-Calls', soon: false },
+    { label: 'Kontor: Frage- & Austausch-Board nach Level', soon: false },
+    { label: 'Termin-Kalender (Live-Calls, Zinsentscheide, Fristen)', soon: false },
+    { label: '4 Rechner: Mietrendite, Cashflow, Nebenkosten, Annuität', soon: false },
+    { label: 'Objekt-Analysen & Deal-Reviews', soon: true },
+    { label: 'Wöchentliche Markt-Updates', soon: true },
+    { label: 'Monatsreport: Zinsen, Preise, Gesetze', soon: true },
+    { label: 'Live Q&A-Calls & Objektbesprechungen', soon: true },
+    { label: 'Monatliche Challenges mit Feedback', soon: true },
+    { label: 'Mitglieder-Spotlights & 1:1-Feedback-Calls', soon: true },
     { label: 'Blueprint+ mit vertiefenden Praxismodulen', soon: true },
     { label: 'Deal-Radar: kuratierte Objekt-Hinweise', soon: true },
     { label: 'Mitglieder-App für unterwegs', soon: true },
@@ -605,6 +608,11 @@ export const legal = {
         heading: '5. Deine Rechte',
         placeholder: true,
         body: 'Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerruf erteilter Einwilligungen sowie ein Beschwerderecht bei einer Aufsichtsbehörde. [Vollständige Belehrung ergänzen.]',
+      },
+      {
+        heading: '6. Konto & Löschung',
+        placeholder: true,
+        body: 'Über „Profil → Account löschen" kannst du deine Profil- und Fortschrittsdaten selbst entfernen. Die endgültige Löschung deines Zugangs (Auth-Konto) veranlassen wir nach einer kurzen Mitteilung an kontakt@immofugger.de. [Vor Launch an das eingesetzte Backend (Supabase) und die tatsächlichen Löschfristen anpassen.]',
       },
     ],
   },

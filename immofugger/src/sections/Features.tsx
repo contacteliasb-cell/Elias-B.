@@ -41,9 +41,16 @@ export function Features() {
             <Reveal key={card.id} delay={(i % 3) * 0.1} className={spanById[card.id] ?? ''}>
               <article className="kontor-card group flex h-full flex-col gap-4 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-card">
                 <div>
-                  <h3 className="font-display text-2xl font-semibold text-parchment group-hover:text-gold-pale">
-                    {card.title}
-                  </h3>
+                  <div className="flex items-center gap-2">
+                    <h3 className="font-display text-2xl font-semibold text-parchment group-hover:text-gold-pale">
+                      {card.title}
+                    </h3>
+                    {card.soon && (
+                      <span className="rounded border border-night-line bg-night px-1.5 py-px font-mono text-[9px] uppercase tracking-wider text-slateink">
+                        Coming Soon
+                      </span>
+                    )}
+                  </div>
                   <p className="mt-2.5 text-sm leading-relaxed text-slateink">{card.description}</p>
                 </div>
                 <div className={card.id === 'blueprint' ? 'mt-auto flex-1' : 'mt-auto'}>
