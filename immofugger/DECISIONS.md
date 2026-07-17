@@ -78,3 +78,81 @@ Ampel-Schwellen: ≥ +25 € grün, −25 bis +25 € gold („knapp an der Null
   Registrierung inkl. localStorage-Persistenz — alles funktioniert.
 - `npm run build` und `npm run lint` laufen fehlerfrei.
 - OG-Bild (1200 × 630) selbst gestaltet und per headless Chromium nach `public/og.png` gerendert.
+
+---
+
+# Ausbau zur Plattform (Mitgliederbereich) — Entscheidungen
+
+## Backend & Architektur
+
+- **Adapter-Schicht `src/lib/backend/`** mit gemeinsamem Interface (`types.ts`) und
+  zwei Implementierungen (`supabase.ts`, `demo.ts`). Auswahl automatisch in `index.ts`
+  über das Vorhandensein von `VITE_SUPABASE_URL`/`VITE_SUPABASE_ANON_KEY`. So ist kein
+  Feature doppelt gebaut und der Demo-Modus vollständig funktionsgleich.
+- **Demo-Modus** persistiert in localStorage (Keys `immofugger:demo:*`). Passwörter
+  liegen dort im Klartext — bewusst nur für die lokale Demo; im echten Betrieb
+  übernimmt Supabase Auth. In DECISIONS/README dokumentiert.
+- **Account-Löschung bei Supabase:** Der anon-Key darf keine Auth-User löschen. Daher
+  löscht die App Profil-/Fortschritts-/Community-Daten und meldet ab; die endgültige
+  Kontolöschung erfolgt per Mail an die Support-Adresse (UI-Hinweis + Datenschutz-
+  Platzhalter). Sauberster Weg ohne Service-Role-Key im Client.
+- **RLS** in `supabase/schema.sql`: eigene Profile/Progress nur selbst; Community-
+  Beiträge/Antworten lesen alle Authentifizierten, schreiben/löschen nur Autor:innen.
+  Profil-Anlage per `handle_new_user`-Trigger aus den Registrierungs-Metadaten.
+
+## Ränge (Fugger-Pfad)
+
+- **Schwellen** (dokumentiert in `src/lib/ranks.ts`): Lehrling ab 0, Geselle ab 8,
+  Kaufmann ab 18, Handelsherr ab 30, Fugger ab 42 abgeschlossenen Lektionen. Verteilung
+  grob an den Modulgrenzen orientiert, sodass jeder Rang erreichbar und motivierend ist.
+- **Lernstreak** = aufeinanderfolgende Kalendertage mit Lektionsabschluss (aus
+  `lesson_progress.completedAt` abgeleitet). **Quiz-Schnitt** = Mittel der gespeicherten
+  Quiz-Scores.
+- **Quiz-Bestehensgrenze 60 %** wie gefordert; beliebig wiederholbar. Rang-Aufstieg löst
+  ein Framer-Motion-Siegel-Modal aus (`RankUpModal`).
+
+## Inhalte
+
+- **42 Lektionen** (7/7/8/7/7/6) — genau die geforderte Mindestzahl, jede mit Lehrtext,
+  Praxisbeispiel mit konkreten Zahlen, „Kontor-Notiz" und 4 MC-Fragen mit Erklärung.
+  Zins-/Steuersätze durchgehend als „beispielhaft" formuliert; Recht/Steuer-Lektionen
+  mit Beratungs-Hinweis (`legalHint`).
+- **78 Wiki-Artikel** (statt geforderter ≥ 50) in 6 Kategorien — deckt alle im Blueprint
+  referenzierten Begriffe ab. **Automatische Querverlinkung** (`linkifyArticle`): erstes
+  Vorkommen jedes anderen Wiki-Begriffs pro Artikel wird verlinkt, längere Begriffe
+  zuerst, eigener Begriff und Mehrfachlinks ausgeschlossen.
+- **Community-Board statt Live-Chat** (ehrliche Version 1, wie gefordert). Demo-Modus mit
+  5 Beispiel-Beiträgen + 2 Antworten, klar als „(Demo)" gekennzeichnet.
+
+## Rechner — Verifikationsrechnungen (Definition of Done #4)
+
+- **Mietrendite** (250.000 €, 10 % NK, 900 €/M., 80 €/M. Kosten): Brutto
+  (900×12)/250.000 = **4,32 %**; Netto (10.800−960)/275.000 = **3,58 %**. ✓
+- **Cashflow** (250.000 €, 50.000 € EK, 3,8 % Zins, 2 % Tilgung, 900 € Miete,
+  220 € Kosten): Darlehen 200.000 €, Rate 200.000×5,8 %/12 = **966,67 €**,
+  Cashflow 900−220−966,67 = **−286,67 €/M.** → rot. ✓
+- **Kaufnebenkosten** (250.000 € in NRW, GrESt 6,5 %, Notar 2 %, Makler 3,57 %):
+  16.250 + 5.000 + 8.925 = **30.175 €** (12,07 %); Gesamtinvestition **280.175 €**. ✓
+- **Annuität** (200.000 €, 3,8 %, 2 % Tilgung, 10 J.): Rate 966,67 €/M.; Restschuld
+  nach 10 Jahren ≈ **151.000 €** (monatlich iterativ gerechnet); SVG-Tilgungsverlauf
+  selbst gezeichnet, keine Chart-Bibliothek. ✓
+- Grunderwerbsteuersätze als Konfigtabelle mit Stand-Datum und „ohne Gewähr"-Hinweis
+  in `src/config.ts`.
+
+## Landingpage-Abgleich (Ehrlichkeits-Check)
+
+- **Coming-Soon** gekennzeichnet: Bento-Karten „Objekt-Analysen" und „Markt-Updates";
+  in der 0-€-Karte zusätzlich Monatsreport, Live-Q&A-Report-Charakter, monatliche
+  Challenges und Mitglieder-Spotlights (noch nicht real gebaut).
+- **Real & entsprechend gelistet:** Blueprint, Fugger-Pfad, Wiki, Kontor-Board,
+  Kalender, 4 Rechner.
+- **„40+ Lernmodule"** → `STATS.modules = 42` (stimmt jetzt). **„12 Live-Calls/Monat"**
+  → `STATS.liveCalls.value = null` („Regelmäßige Calls"), zentral in config änderbar.
+
+## QA (headless Chromium)
+
+- Voller Flow getestet: Registrierung → Dashboard-Redirect, Lektion+Quiz-Auswertung,
+  Fortschritt/Rang nach Reload persistent, Wiki-Suche+Querverlink, 4 Rechner, Kontor
+  (Regeln-Modal einmalig, Beitrag erstellen), Profil, Logout → geschützte Route
+  redirectet zu /login. Alle 7 App-Seiten bei 375 px ohne Overflow (Dashboard-Overflow
+  durch fehlendes `min-w-0` an Grid-Items gefunden und behoben). Keine Konsolenfehler.
