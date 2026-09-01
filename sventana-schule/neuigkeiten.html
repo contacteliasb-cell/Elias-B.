@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuigkeiten – Sventana-Schule Bornhöved</title>
+  <meta name="description" content="Aktuelle Neuigkeiten und Beiträge aus dem Schulleben der Sventana-Schule Bornhöved – filterbar nach Kategorie.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="neuigkeiten">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Brotkrumen"><a href="index.html">Startseite</a> / Neuigkeiten</nav>
+        <h1>Neuigkeiten</h1>
+        <p class="lead">Aktuelles aus dem Schulleben – von der Grundschule bis zur Sekundarstufe. Nutzen Sie die Filter, um Beiträge nach Kategorie anzuzeigen.</p>
+        <span class="tagline" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <p class="notice notice--yellow" style="margin-bottom:1.6rem"><strong>Hinweis:</strong> Die folgenden Beiträge sind Beispiel-Einträge. <span class="badge badge--ph">PLATZHALTER</span> – echte Inhalte werden aus dem Redaktionssystem übernommen.</p>
+
+        <!-- Filter -->
+        <div class="filter-bar" id="newsFilter" role="tablist" aria-label="Nach Kategorie filtern">
+          <button class="chip active" data-cat="all">Alle</button>
+          <button class="chip" data-cat="allgemein">Allgemein</button>
+          <button class="chip" data-cat="berufsorientierung">Berufsorientierung</button>
+          <button class="chip" data-cat="busfahrplaene">Busfahrpläne</button>
+          <button class="chip" data-cat="eltern">Eltern-Informationen</button>
+          <button class="chip" data-cat="grundschule">Grundschule</button>
+          <button class="chip" data-cat="itslearning">itslearning</button>
+          <button class="chip" data-cat="ogs">Offene Ganztagsschule</button>
+          <button class="chip" data-cat="presse">Presse &amp; Öffentlichkeitsarbeit</button>
+          <button class="chip" data-cat="sv">Schülervertretung</button>
+          <button class="chip" data-cat="sozialarbeit">Schulsozialarbeit</button>
+        </div>
+
+        <div class="news-list" id="newsList">
+
+          <article class="news-item" data-cat="grundschule">
+            <div class="news-thumb">[BILD-PLATZHALTER]</div>
+            <div class="news-body">
+              <div class="news-meta"><span class="cat-tag accent-green">Grundschule</span><span class="news-date">28.08.2026</span></div>
+              <h3><a href="#">Ein bunter Start: Einschulung unserer neuen Erstklässler</a></h3>
+              <p class="muted">Mit einer feierlichen Begrüßung in der Aula, einem kleinen Programm der zweiten Klassen und stolzen Schultüten hieß die Sventana-Schule ihre jüngsten Schülerinnen und Schüler willkommen. <span class="badge badge--ph">PLATZHALTER</span></p>
+            </div>
+          </article>
+
+          <article class="news-item" data-cat="berufsorientierung">
+            <div class="news-thumb">[BILD-PLATZHALTER]</div>
+            <div class="news-body">
+              <div class="news-meta"><span class="cat-tag accent-blue">Berufsorientierung</span><span class="news-date">15.08.2026</span></div>
+              <h3><a href="#">Praktikumswoche: Neuntklässler entdecken Berufe der Region</a></h3>
+              <p class="muted">In Zusammenarbeit mit unseren Kooperationspartnern sammelten die 9. Klassen praktische Einblicke in Handwerk, Pflege und Technik. <span class="badge badge--ph">PLATZHALTER</span></p>
+            </div>
+          </article>
+
+          <article class="news-item" data-cat="eltern">
+            <div class="news-thumb">[BILD-PLATZHALTER]</div>
+            <div class="news-body">
+              <div class="news-meta"><span class="cat-tag accent-red">Eltern-Informationen</span><span class="news-date">05.08.2026</span></div>
+              <h3><a href="#">Alle Termine zum Schuljahresbeginn 2026/27</a></h3>
+              <p class="muted">Elternabende, erster Schultag, Fotoaktion und Ganztagsanmeldung – hier finden Sie die wichtigsten Termine kompakt zusammengefasst. <span class="badge badge--ph">PLATZHALTER</span></p>
+            </div>
+          </article>
+
+          <article class="news-item" data-cat="busfahrplaene">
+            <div class="news-thumb">[BILD-PLATZHALTER]</div>
+            <div class="news-body">
+              <div class="news-meta"><span class="cat-tag accent-yellow">Busfahrpläne</span><span class="news-date">01.08.2026</span></div>
+              <h3><a href="#">Neue Busfahrpläne für das Schuljahr 2026/27</a></h3>
+              <p class="muted">Die aktualisierten Abfahrtszeiten der Schulbusse stehen ab sofort zum Download bereit. Bitte beachten Sie die geänderten Zeiten an den Nachmittagen. <span class="badge badge--ph">PLATZHALTER</span></p>
+            </div>
+          </article>
+
+          <article class="news-item" data-cat="itslearning">
+            <div class="news-thumb">[BILD-PLATZHALTER]</div>
+            <div class="news-body">
+              <div class="news-meta"><span class="cat-tag accent-blue">itslearning</span><span class="news-date">22.07.2026</span></div>
+              <h3><a href="#">itslearning: Zugangsdaten für neue Schülerinnen und Schüler</a></h3>
+              <p class="muted">So melden sich Ihre Kinder in unserer digitalen Lernplattform an und finden Aufgaben, Materialien und Nachrichten der Lehrkräfte. <span class="badge badge--ph">PLATZHALTER</span></p>
+            </div>
+          </article>
+
+          <article class="news-item" data-cat="ogs">
+            <div class="news-thumb">[BILD-PLATZHALTER]</div>
+            <div class="news-body">
+              <div class="news-meta"><span class="cat-tag accent-green">Offene Ganztagsschule</span><span class="news-date">10.07.2026</span></div>
+              <h3><a href="#">Neue AGs im Ganztag: Von Kochen bis Programmieren</a></h3>
+              <p class="muted">Das Angebot der Offenen Ganztagsschule wächst. Die Anmeldung für die Arbeitsgemeinschaften im neuen Halbjahr ist eröffnet. <span class="badge badge--ph">PLATZHALTER</span></p>
+            </div>
+          </article>
+
+          <article class="news-item" data-cat="sv">
+            <div class="news-thumb">[BILD-PLATZHALTER]</div>
+            <div class="news-body">
+              <div class="news-meta"><span class="cat-tag accent-red">Schülervertretung</span><span class="news-date">28.06.2026</span></div>
+              <h3><a href="#">Die neue Schülervertretung stellt sich vor</a></h3>
+              <p class="muted">Gewählt, engagiert und voller Ideen: Die SV berichtet über ihre Pläne für ein noch besseres Schulklima. <span class="badge badge--ph">PLATZHALTER</span></p>
+            </div>
+          </article>
+
+          <article class="news-item" data-cat="sozialarbeit">
+            <div class="news-thumb">[BILD-PLATZHALTER]</div>
+            <div class="news-body">
+              <div class="news-meta"><span class="cat-tag accent-blue">Schulsozialarbeit</span><span class="news-date">14.06.2026</span></div>
+              <h3><a href="#">Schulsozialarbeit: Offene Sprechstunde für Schülerinnen und Schüler</a></h3>
+              <p class="muted">Unser Team der Schulsozialarbeit ist Ansprechpartner bei großen und kleinen Sorgen – vertraulich und ohne Anmeldung. <span class="badge badge--ph">PLATZHALTER</span></p>
+            </div>
+          </article>
+
+          <article class="news-item" data-cat="presse">
+            <div class="news-thumb">[BILD-PLATZHALTER]</div>
+            <div class="news-body">
+              <div class="news-meta"><span class="cat-tag accent-yellow">Presse &amp; Öffentlichkeitsarbeit</span><span class="news-date">02.06.2026</span></div>
+              <h3><a href="#">Sventana-Schule in der Presse: Projektwoche „Nachhaltigkeit“</a></h3>
+              <p class="muted">Die lokale Presse berichtete über unsere schulweite Projektwoche zum Thema Klima und Nachhaltigkeit. <span class="badge badge--ph">PLATZHALTER</span></p>
+            </div>
+          </article>
+
+          <article class="news-item" data-cat="allgemein">
+            <div class="news-thumb">[BILD-PLATZHALTER]</div>
+            <div class="news-body">
+              <div class="news-meta"><span class="cat-tag accent-blue">Allgemein</span><span class="news-date">20.05.2026</span></div>
+              <h3><a href="#">Frühlingsfest an der Sventana-Schule war ein voller Erfolg</a></h3>
+              <p class="muted">Bei strahlendem Wetter feierten Kinder, Eltern und Lehrkräfte gemeinsam auf dem Schulhof – mit Bühnenprogramm, Ständen und Mitmachaktionen. <span class="badge badge--ph">PLATZHALTER</span></p>
+            </div>
+          </article>
+
+        </div>
+
+        <p id="newsEmpty" class="notice hidden" style="margin-top:1.6rem">In dieser Kategorie sind aktuell keine Beiträge vorhanden.</p>
+
+        <div class="center mt-3">
+          <button class="btn btn--ghost" disabled>Weitere Beiträge laden <span class="badge badge--ph">PLATZHALTER</span></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
